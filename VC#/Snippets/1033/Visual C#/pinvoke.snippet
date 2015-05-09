@@ -8,7 +8,7 @@
 			<Author>Microsoft Corporation</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
-                <SnippetType>SurroundsWith</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
@@ -18,15 +18,15 @@
 					<Function>SimpleTypeName(global::System.Threading.Tasks.Parallel)</Function>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$Parallel$.Invoke(() => 
-                {
-                    $selected$ $end$
-                }, 
-                
-                () => 
-                {
-                
-                });]]>
+			<Code Language="csharp"><![CDATA[$Parallel$.Invoke(
+				() =>
+				{
+					$selected$$end$
+				},
+				() =>
+				{
+				
+				});]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

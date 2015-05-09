@@ -12,11 +12,11 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-                <Literal>
-                    <ID>access</ID>
-                    <ToolTip>Access modifier</ToolTip>
-                    <Default>public</Default>
-                </Literal>
+				<Literal>
+					<ID>access</ID>
+					<ToolTip>Access modifier</ToolTip>
+					<Default>public</Default>
+				</Literal>
 				<Literal>
 					<ID>type</ID>
 					<ToolTip>Property type</ToolTip>
@@ -32,34 +32,35 @@
 					<ToolTip>The variable backing this property</ToolTip>
 					<Default>field</Default>
 				</Literal>
-                <Literal>
-                    <ID>summary</ID>
-                    <ToolTip>Summary</ToolTip>
-                    <Default>summary</Default>
-                </Literal>
+				<Literal>
+					<ID>summary</ID>
+					<ToolTip>Summary</ToolTip>
+					<Default>summary</Default>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp">
-                <![CDATA[/// <summary>
+				<![CDATA[/// <summary>
 /// Gets or sets the $summary$.
 /// </summary>
 /// <value>The $summary$.</value>
 $access$ $type$ $property$
 {
-	get 
-    { 
-        return this.$field$;
-    }
-    
-	set 
-    { 
-        if (value != this.$field$)
-        {
-            this.$field$ = value;
+	get
+	{
+		return this.$field$;
+	}
+	
+	set
+	{
+		if (value != this.$field$)
+		{
+			this.$field$ = value;
 
-            this.OnPropertyChanged("$property$");
-        }        
-    }
-}$end$]]>
+			this.OnPropertyChanged("$property$");
+		}
+	}
+}
+$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

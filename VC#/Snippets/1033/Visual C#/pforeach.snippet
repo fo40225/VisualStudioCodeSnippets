@@ -8,7 +8,7 @@
 			<Author>Microsoft Corporation</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
-                <SnippetType>SurroundsWith</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
@@ -17,16 +17,16 @@
 					<ID>Parallel</ID>
 					<Function>SimpleTypeName(global::System.Threading.Tasks.Parallel)</Function>
 				</Literal>
-                <Literal>
-                    <ID>source</ID>
-                    <ToolTip>An enumerable data source.</ToolTip>
-                    <Default>source</Default>
-                </Literal>
-                <Literal>
-                    <ID>item</ID>
-                    <ToolTip>The current item in the collection.</ToolTip>
-                    <Default>item</Default>
-                </Literal>
+				<Literal>
+					<ID>source</ID>
+					<ToolTip>An enumerable data source.</ToolTip>
+					<Default>source</Default>
+				</Literal>
+				<Literal>
+					<ID>item</ID>
+					<ToolTip>The current item in the collection.</ToolTip>
+					<Default>item</Default>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp"><![CDATA[$Parallel$.ForEach($source$, $item$ => 
 			{

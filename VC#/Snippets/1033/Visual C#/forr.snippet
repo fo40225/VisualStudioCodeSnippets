@@ -15,7 +15,7 @@
 			<Declarations>
 				<Literal>
 					<ID>index</ID>
-					<Default>index</Default>
+					<Default>i</Default>
 					<ToolTip>Index</ToolTip>
 				</Literal>
 				<Literal>
@@ -24,10 +24,10 @@
 					<ToolTip>Max length</ToolTip>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[for (int $index$ = $max$ - 1; $index$ >= 0 ; $index$--)
-			{
-			    $selected$$end$
-			}]]>
+			<Code Language="csharp"><![CDATA[for (int $index$ = $max$ - 1; $index$ >= 0; --$index$)
+{
+	$selected$$end$
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

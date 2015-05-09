@@ -12,17 +12,17 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-                <Literal>
-                    <ID>summary</ID>
-                    <ToolTip>Summary</ToolTip>
-                    <Default>Represents a users identity.</Default>
-                </Literal>
-                <Literal>
-                    <ID>access</ID>
-                    <ToolTip>Access modifier</ToolTip>
-                    <Default>public</Default>
-                </Literal>
-                <Literal>
+				<Literal>
+					<ID>summary</ID>
+					<ToolTip>Summary</ToolTip>
+					<Default>Represents a users identity.</Default>
+				</Literal>
+				<Literal>
+					<ID>access</ID>
+					<ToolTip>Access modifier</ToolTip>
+					<Default>public</Default>
+				</Literal>
+				<Literal>
 					<ID>name</ID>
 					<ToolTip>Name of your </ToolTip>
 					<Default>My</Default>
@@ -31,59 +31,59 @@
 					<ID>SystemSecurityPrincipalIIdentity</ID>
 					<Function>SimpleTypeName(global::System.Security.Principal.IIdentity)</Function>
 				</Literal>
-                <Literal Editable="false">
-                    <ID>Exception</ID>
-                    <Function>SimpleTypeName(global::System.NotImplementedException)</Function>
-                </Literal>
+				<Literal Editable="false">
+					<ID>Exception</ID>
+					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
+				</Literal>
 				</Declarations>
 			<Code Language="csharp">
-      <![CDATA[/// <summary>
+				<![CDATA[/// <summary>
 /// $summary$
 /// </summary>
 $access$ class $name$Identity : $SystemSecurityPrincipalIIdentity$
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="T:$name$Identity"/> class
-    /// </summary>
-    public $name$Identity() 
-    {
-    }
-    
-    /// <summary>
-    /// Gets the type of authentication used.
-    /// </summary>
-    /// <value>The type of authentication used to identify the user.</value>
-    public string AuthenticationType
-    {
-        get 
-        { 
-            throw new NotImplementedException(); 
-        }
-    }
+	/// <summary>
+	/// Initializes a new instance of the <see cref="T:$name$Identity"/> class
+	/// </summary>
+	public $name$Identity() 
+	{
+	}
 
-    /// <summary>
-    /// Gets a value indicating whether the user has been authenticated.
-    /// </summary>
-    /// <value><c>true</c> if the user was authenticated; otherwise, <c>false</c>.</value>
-    public bool IsAuthenticated
-    {
-        get 
-        { 
-            throw new NotImplementedException(); 
-        }
-    }
+	/// <summary>
+	/// Gets the type of authentication used.
+	/// </summary>
+	/// <value>The type of authentication used to identify the user.</value>
+	public string AuthenticationType
+	{
+		get 
+		{ 
+			throw new NotImplementedException(); 
+		}
+	}
 
-    /// <summary>
-    /// Gets the name of the current user.
-    /// </summary>    
-    /// <value>The name of the user on whose behalf the code is running.</value>
-    public string Name
-    {
-        get 
-        { 
-            throw new NotImplementedException(); 
-        }
-    }
+	/// <summary>
+	/// Gets a value indicating whether the user has been authenticated.
+	/// </summary>
+	/// <value><c>true</c> if the user was authenticated; otherwise, <c>false</c>.</value>
+	public bool IsAuthenticated
+	{
+		get 
+		{ 
+			throw new NotImplementedException(); 
+		}
+	}
+
+	/// <summary>
+	/// Gets the name of the current user.
+	/// </summary>    
+	/// <value>The name of the user on whose behalf the code is running.</value>
+	public string Name
+	{
+		get 
+		{ 
+			throw new NotImplementedException(); 
+		}
+	}
 }]]>
 			</Code>
 		</Snippet>

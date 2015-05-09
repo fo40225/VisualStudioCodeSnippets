@@ -17,11 +17,11 @@
 					<ToolTip>The name of the attribute</ToolTip>
 					<Default>My</Default>
 				</Literal>
-                <Literal>
-                    <ID>access</ID>
-                    <ToolTip>Access modifier</ToolTip>
-                    <Default>public</Default>
-                </Literal>
+				<Literal>
+					<ID>access</ID>
+					<ToolTip>Access modifier</ToolTip>
+					<Default>public</Default>
+				</Literal>
 				<Literal>
 					<ID>target</ID>
 					<Default>All</Default>
@@ -50,11 +50,11 @@
 					<ID>Exception</ID>
 					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
 				</Literal>
-                <Literal>
-                    <ID>summary</ID>
-                    <ToolTip>Summary</ToolTip>
-                    <Default>Summary</Default>
-                </Literal>
+				<Literal>
+					<ID>summary</ID>
+					<ToolTip>Summary</ToolTip>
+					<Default>Summary</Default>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp"><![CDATA[/// <summary>
 /// $summary$$end$
@@ -62,12 +62,12 @@
 [$SystemAttributeUsage$($SystemAttributeTargets$.$target$, Inherited = $inherited$, AllowMultiple = $allowmultiple$)]
 $access$ sealed class $name$Attribute : $SystemAttribute$
 {
-    /// <summary>
-    /// Initializes a new instance of the <see cref="T:$name$Attribute"/> class. 
-    /// </summary>
-    public $name$Attribute()
-    {
-    }        
+	/// <summary>
+	/// Initializes a new instance of the <see cref="T:$name$Attribute"/> class. 
+	/// </summary>
+	public $name$Attribute()
+	{
+	}
 }]]>
 			</Code>
 		</Snippet>

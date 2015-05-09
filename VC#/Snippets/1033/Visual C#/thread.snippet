@@ -14,20 +14,22 @@
 		<Snippet>
 			<Declarations>
 				<Literal Editable="false">
-                    <ID>SystemThreadingThread</ID>
+					<ID>SystemThreadingThread</ID>
 					<Function>SimpleTypeName(global::System.Threading.Thread)</Function>
 				</Literal>
-                <Literal>
-                    <ID>thread</ID>
-                    <Default>thread</Default>
-                    <ToolTip>Thread instance</ToolTip>
-                </Literal>
+				<Literal>
+					<ID>thread</ID>
+					<Default>thread</Default>
+					<ToolTip>Thread instance</ToolTip>
+				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(() => {	        
-		$selected$ $end$
-	});
-    
-    $thread$.Start();]]>
+			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(
+				() => 
+				{
+					$selected$$end$
+				});
+
+			$thread$.Start();]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

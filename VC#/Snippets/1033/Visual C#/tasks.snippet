@@ -4,7 +4,7 @@
         <Header>
             <Title>tasks</Title>
             <Shortcut>tasks</Shortcut>
-            <Description>Code snippet for starting a new task using a lambda expression.</Description>
+            <Description>Code snippet for starting a new task with task state value using a lambda expression.</Description>
             <Author>Microsoft Corporation</Author>
             <SnippetTypes>
                 <SnippetType>Expansion</SnippetType>
@@ -33,12 +33,11 @@
                     <ToolTip>Task state value</ToolTip>
                 </Literal>
             </Declarations>
-            <Code Language="csharp"><![CDATA[$SystemThreadingTasksTask$.Factory.StartNew(
-                ($state$) => 
-                { 
-                    $selected$$end$ 
-                }, 
-                $value$);]]>
+            <Code Language="csharp"><![CDATA[var $task$ = $SystemThreadingTasksTask$.Factory.StartNew(
+                ($state$) =>
+                {
+                    $selected$$end$
+                }, $value$);]]>
             </Code>
         </Snippet>
     </CodeSnippet>

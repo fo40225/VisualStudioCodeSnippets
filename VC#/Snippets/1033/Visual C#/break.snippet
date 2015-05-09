@@ -18,7 +18,11 @@
                 </Literal>
             </Declarations>
             <Code Language="csharp">
-                <![CDATA[$SystemDiagnosticsDebugger$.Break();$end$]]>
+                <![CDATA[if($SystemDiagnosticsDebugger$.IsAttached)
+{
+    $SystemDiagnosticsDebugger$.Break();
+}
+$end$]]>
             </Code>
         </Snippet>
     </CodeSnippet>

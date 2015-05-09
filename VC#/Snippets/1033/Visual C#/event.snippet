@@ -12,63 +12,63 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-                <Literal>
-                    <ID>access</ID>
-                    <ToolTip>Access modifier</ToolTip>
-                    <Default>public</Default>
-                </Literal>
-                <Literal Editable="true">
-                    <ID>args</ID>
-                    <ToolTip>EventArgs</ToolTip>
-                    <Function>SimpleTypeName(global::System.EventArgs)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>SystemEventHandler</ID>
-                    <Function>SimpleTypeName(global::System.EventHandler)</Function>
-                </Literal>
-                <Literal>
-                    <ID>field</ID>
-                    <ToolTip>Backing field name.</ToolTip>
-                    <Default>field</Default>
-                </Literal>
+				<Literal>
+					<ID>access</ID>
+					<ToolTip>Access modifier</ToolTip>
+					<Default>public</Default>
+				</Literal>
+				<Literal Editable="true">
+					<ID>args</ID>
+					<ToolTip>EventArgs</ToolTip>
+					<Function>SimpleTypeName(global::System.EventArgs)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemEventHandler</ID>
+					<Function>SimpleTypeName(global::System.EventHandler)</Function>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>Backing field name.</ToolTip>
+					<Default>field</Default>
+				</Literal>
 				<Literal>
 					<ID>event</ID>
 					<ToolTip>Event name</ToolTip>
 					<Default>Event</Default>
 				</Literal>
-                <Literal Editable="false">
-                    <ID>SystemThreadingInterlocked</ID>
-                    <Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>classname</ID>
-                    <ToolTip>Class name</ToolTip>
-                    <Function>ClassName()</Function>
-                    <Default>ClassNamePlaceholder</Default>
-                </Literal>
+				<Literal Editable="false">
+					<ID>SystemThreadingInterlocked</ID>
+					<Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Function>ClassName()</Function>
+					<Default>ClassNamePlaceholder</Default>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp">
-                <![CDATA[/// <summary>
+				<![CDATA[/// <summary>
 /// The event handler for the <see cref="E:$classname$.$event$"/> event.
 /// </summary>
 private $SystemEventHandler$<$args$> $field$;
-                
+
 /// <summary>
 /// Occurs when $end$
 /// </summary>
 $access$ event $SystemEventHandler$<$args$> $event$
 {
 	add 
-    { 
-        // TODO: write your implementation of the add accessor here
-        this.$field$ += value;
-    }
-    
+	{ 
+		// TODO: write your implementation of the add accessor here
+		this.$field$ += value;
+	}
+	
 	remove 
-    { 
-        // TODO: write your implementation of the remove accessor here
-        this.$field$ -= value;
-    }
+	{ 
+		// TODO: write your implementation of the remove accessor here
+		this.$field$ -= value;
+	}
 }
 
 /// <summary>
@@ -77,12 +77,12 @@ $access$ event $SystemEventHandler$<$args$> $event$
 /// <param name="e">The <see cref="T:$args$"/> instance containing the event data.</param>
 protected virtual void On$event$($args$ e)
 {
-    $SystemEventHandler$<$args$> handler = $SystemThreadingInterlocked$.CompareExchange(ref this.$field$, null, null);
-    
-    if(handler != null)
-    {
-        handler(this, e);
-    }
+	$SystemEventHandler$<$args$> handler = $SystemThreadingInterlocked$.CompareExchange(ref this.$field$, null, null);
+	
+	if(handler != null)
+	{
+		handler(this, e);
+	}
 }]]>
 			</Code>
 		</Snippet>

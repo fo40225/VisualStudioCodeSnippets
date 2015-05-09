@@ -18,21 +18,29 @@
 					<ToolTip>Exception type</ToolTip>
 					<Function>SimpleTypeName(global::System.Exception)</Function>
 				</Literal>
-                <Literal>
-                    <ID>ex</ID>
-                    <Default>ex</Default>
-                    <ToolTip>Exception instance</ToolTip>
-                </Literal>
+				<Literal>
+					<ID>ex</ID>
+					<Default>ex</Default>
+					<ToolTip>Exception instance</ToolTip>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemDiagnosticsDebugger</ID>
+					<Function>SimpleTypeName(global::System.Diagnostics.Debugger)</Function>
+				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[try 
-	{	        
-		$selected$
-	}
-	catch ($expression$ $ex$)
+			<Code Language="csharp"><![CDATA[try
+{
+	$selected$
+}
+catch ($expression$ $ex$)
+{
+	if($SystemDiagnosticsDebugger$.IsAttached)
 	{
-		$end$
-		throw;
-	}]]>
+		$SystemDiagnosticsDebugger$.Break();
+	}
+	$end$
+	throw;
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

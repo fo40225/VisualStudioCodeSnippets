@@ -17,12 +17,12 @@
 					<ToolTip>Access modifier</ToolTip>
 					<Default>public</Default>
 				</Literal>
-                <Literal>
-                    <ID>fulltype</ID>
-                    <ToolTip>Fully qualified type to return from indexer</ToolTip>
-                    <Default>System.Object</Default>
-                </Literal>
-                <Literal>
+				<Literal>
+					<ID>fulltype</ID>
+					<ToolTip>Fully qualified type to return from indexer</ToolTip>
+					<Default>System.Object</Default>
+				</Literal>
+				<Literal>
 					<ID>type</ID>
 					<ToolTip>Type to return from indexer</ToolTip>
 					<Default>object</Default>
@@ -32,31 +32,31 @@
 					<ToolTip>Type used to specify index</ToolTip>
 					<Default>int</Default>
 				</Literal>
-                <Literal Editable="false">
-                    <ID>SystemNotImplementedException</ID>
-                    <Function>SimpleTypeName(global::System.NotImplementedException)</Function>
-                </Literal>
+				<Literal Editable="false">
+					<ID>SystemNotImplementedException</ID>
+					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp">
-        <![CDATA[/// <summary>
-    /// Gets or sets the <see cref="T:$fulltype$"/> at the specified index.
-    /// </summary>
-    /// <param name="index">The index of the element to get or set.</param>
-    /// <value>The <see cref="T:$fulltype$"/> at the specified index.</value>
-    $access$ $type$ this[$indextype$ index]
+				<![CDATA[/// <summary>
+/// Gets or sets the <see cref="T:$fulltype$"/> at the specified index.
+/// </summary>
+/// <param name="index">The index of the element to get or set.</param>
+/// <value>The <see cref="T:$fulltype$"/> at the specified index.</value>
+$access$ $type$ this[$indextype$ index]
+{
+	get 
 	{
-		get 
-        {
-            // TODO: return the specified index here
-            throw new $SystemNotImplementedException$();$end$
-        }
-        
-		set 
-        { 
-            // TODO: set the specified index to value here
-            throw new $SystemNotImplementedException$();
-        }
-	}]]>
+		// TODO: return the specified index here
+		throw new $SystemNotImplementedException$();$end$
+	}
+
+	set 
+	{ 
+		// TODO: set the specified index to value here
+		throw new $SystemNotImplementedException$();
+	}
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

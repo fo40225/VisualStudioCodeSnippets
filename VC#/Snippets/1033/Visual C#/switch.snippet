@@ -20,13 +20,15 @@
 				<Literal Editable="false">
 					<ID>cases</ID>
 					<Function>GenerateSwitchCases($expression$)</Function>
-					<Default>default:</Default>
+					<Default>default:
+	
+	break;</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="csharp"><![CDATA[switch ($expression$)
-	{
-		$cases$
-	}$end$]]>
+{
+	$end$$cases$
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

@@ -17,36 +17,36 @@
 					<Default>MyEvent</Default>
 					<ToolTip>Public field-like event, or event accessor backing field, to invoke</ToolTip>
 				</Literal>
-                <Literal>
-                    <ID>handler</ID>
-                    <Default>handler</Default>
-                    <ToolTip>Event method to invoke</ToolTip>
-                </Literal>
+				<Literal>
+					<ID>handler</ID>
+					<Default>handler</Default>
+					<ToolTip>Event method to invoke</ToolTip>
+				</Literal>
 				<Literal>
 					<ID>DelegateType</ID>
 					<Default>EventHandler</Default>
 					<ToolTip>Delegate type</ToolTip>
 				</Literal>
-                <Literal Editable="true">
-                    <ID>args</ID>
-                    <ToolTip>EventArgs</ToolTip>
-                    <Function>SimpleTypeName(global::System.EventArgs)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>SystemEventHandler</ID>
-                    <Function>SimpleTypeName(global::System.EventHandler)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>SystemThreadingInterlocked</ID>
-                    <Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
-                </Literal>
+				<Literal Editable="true">
+					<ID>args</ID>
+					<ToolTip>EventArgs</ToolTip>
+					<Function>SimpleTypeName(global::System.EventArgs)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemEventHandler</ID>
+					<Function>SimpleTypeName(global::System.EventHandler)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemThreadingInterlocked</ID>
+					<Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp">
-                <![CDATA[$SystemEventHandler$<$args$> $handler$ = $SystemThreadingInterlocked$.CompareExchange(ref $name$, null, null);
-                
+				<![CDATA[$SystemEventHandler$<$args$> $handler$ = $SystemThreadingInterlocked$.CompareExchange(ref $name$, null, null);
+
 if ($handler$ != null)
 {
-    $handler$(this, e);$end$
+	$handler$(this, e);$end$
 }]]>
 			</Code>
 		</Snippet>

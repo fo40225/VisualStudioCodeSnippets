@@ -2,20 +2,26 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>finally</Title>
-			<Shortcut>finally</Shortcut>
-			<Description>Code snippet for finally block</Description>
-			<Author>Microsoft Corporation</Author>
+			<Title>case</Title>
+			<Shortcut>case</Shortcut>
+			<Description>Code snippet for case statement</Description>
+			<Author></Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
-			<Code Language="csharp"><![CDATA[finally
-{
+			<Declarations>
+				<Literal>
+					<ID>caseSwitch</ID>
+					<Default>caseSwitch</Default>
+					<ToolTip>switch expression</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[case $caseSwitch$:
 	$selected$$end$
-}]]>
+		break;]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

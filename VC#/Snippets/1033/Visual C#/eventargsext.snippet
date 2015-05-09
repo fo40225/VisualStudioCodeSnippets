@@ -11,43 +11,43 @@
 			</SnippetTypes>
 		</Header>
 		<Snippet>
-            <Declarations>
-                <Literal Editable="false">
-                    <ID>SystemThreadingInterlocked</ID>
-                    <Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>SystemEventHandler</ID>
-                    <Function>SimpleTypeName(global::System.EventHandler)</Function>
-                </Literal>
-                <Literal Editable="false">
-                    <ID>SystemEventArgs</ID>
-                    <ToolTip>EventArgs</ToolTip>
-                    <Function>SimpleTypeName(global::System.EventArgs)</Function>
-                </Literal>
-            </Declarations>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemThreadingInterlocked</ID>
+					<Function>SimpleTypeName(global::System.Threading.Interlocked)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemEventHandler</ID>
+					<Function>SimpleTypeName(global::System.EventHandler)</Function>
+				</Literal>
+				<Literal Editable="false">
+					<ID>SystemEventArgs</ID>
+					<ToolTip>EventArgs</ToolTip>
+					<Function>SimpleTypeName(global::System.EventArgs)</Function>
+				</Literal>
+			</Declarations>
 			<Code Language="csharp">
-      <![CDATA[/// <summary>
+				<![CDATA[/// <summary>
 /// Provides extension methods for the <see cref="T:System.EventArgs"/> class.
 /// </summary>
 public static class EventArgsExtensions
 {
-    /// <summary>
-    /// Raises an event ensuring thread safety.
-    /// </summary>
-    /// <typeparam name="T">The type containing the event data.</typeparam>
-    /// <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
-    /// <param name="sender">The source of the event.</param>
-    /// <param name="handler">A delegate representing the method that will handle an event.</param>
-    public static void Raise<T>(this T e, object sender, ref $SystemEventHandler$<T> handler) where T : $SystemEventArgs$
-    {
-        $SystemEventHandler$<T> temp = $SystemThreadingInterlocked$.CompareExchange(ref handler, null, null);
-        
-        if(temp != null)
-        {
-            temp(sender, e);
-        }
-    }
+	/// <summary>
+	/// Raises an event ensuring thread safety.
+	/// </summary>
+	/// <typeparam name="T">The type containing the event data.</typeparam>
+	/// <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+	/// <param name="sender">The source of the event.</param>
+	/// <param name="handler">A delegate representing the method that will handle an event.</param>
+	public static void Raise<T>(this T e, object sender, ref $SystemEventHandler$<T> handler) where T : $SystemEventArgs$
+	{
+		$SystemEventHandler$<T> temp = $SystemThreadingInterlocked$.CompareExchange(ref handler, null, null);
+		
+		if(temp != null)
+		{
+			temp(sender, e);
+		}
+	}
 }]]>
 			</Code>
 		</Snippet>

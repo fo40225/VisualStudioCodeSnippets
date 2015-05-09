@@ -13,23 +13,23 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-                <Literal Editable="false">
-                    <ID>SystemTransactionsTransactionScope</ID>
-                    <Function>SimpleTypeName(global::System.Transactions.TransactionScope)</Function>
-                </Literal>
+				<Literal Editable="false">
+					<ID>SystemTransactionsTransactionScope</ID>
+					<Function>SimpleTypeName(global::System.Transactions.TransactionScope)</Function>
+				</Literal>
 				<Literal>
 					<ID>name</ID>
 					<ToolTip>name</ToolTip>
-					<Default>scope</Default>
+					<Default>ts</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="csharp">
-                <![CDATA[using($SystemTransactionsTransactionScope$ $name$ = new $SystemTransactionsTransactionScope$())
-	{
-		$selected$$end$ 
-        
-        $name$.Complete();
-	}]]>
+				<![CDATA[using($SystemTransactionsTransactionScope$ $name$ = new $SystemTransactionsTransactionScope$())
+{
+	$selected$$end$
+	
+	$name$.Complete();
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
