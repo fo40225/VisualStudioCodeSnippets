@@ -13,13 +13,26 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-				<Literal>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Access modifier</ToolTip>
+                    <Default>public</Default>
+                </Literal>
+                <Literal>
 					<ID>name</ID>
 					<ToolTip>Interface name</ToolTip>
 					<Default>Interface</Default>
 				</Literal>
+                <Literal>
+                    <ID>summary</ID>
+                    <ToolTip>Summary</ToolTip>
+                    <Default>Summary</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[interface I$name$
+			<Code Language="csharp"><![CDATA[/// <summary>
+    /// $summary$
+    /// </summary>
+    $access$ interface I$name$
 	{
 		$selected$$end$
 	}]]>

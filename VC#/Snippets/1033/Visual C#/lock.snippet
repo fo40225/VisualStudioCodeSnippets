@@ -14,12 +14,13 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>expression</ID>
-					<ToolTip>Expression to evaluate</ToolTip>
-					<Default>this</Default>
+					<ID>synchronizationObject</ID>
+					<ToolTip>Synchronization Object</ToolTip>
+					<Default>synchronizationObject</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[lock ($expression$)
+			<Code Language="csharp">
+        <![CDATA[lock (this.$synchronizationObject$)
 	{
 		$selected$ $end$
 	}]]>

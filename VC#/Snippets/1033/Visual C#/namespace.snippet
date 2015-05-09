@@ -14,12 +14,17 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>name</ID>
-					<ToolTip>Namespace name</ToolTip>
-					<Default>MyNamespace</Default>
+					<ID>company</ID>
+					<ToolTip>Company</ToolTip>
+					<Default>CodePlex</Default>
 				</Literal>
+                <Literal>
+                    <ID>project</ID>
+                    <ToolTip>Project</ToolTip>
+                    <Default>Project</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[namespace $name$
+			<Code Language="csharp"><![CDATA[namespace $company$.$project$
 	{
 		$selected$ $end$
 	}]]>

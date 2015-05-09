@@ -11,37 +11,29 @@
 			</SnippetTypes>
 		</Header>
 		<Snippet>
-			<Declarations>
-				<Literal Editable="false">
-					<ID>Exception</ID>
-					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
-				</Literal>
-			</Declarations>
-			<Code Language="csharp"><![CDATA[// override object.Equals
+			<Code Language="csharp">
+                <![CDATA[/// <summary>
+    /// Determines whether the specified <see cref="System.Object"/> is equal to this instance.
+    /// </summary>
+    /// <param name="obj">The <see cref="System.Object"/> to compare with this instance.</param>
+    /// <returns>
+    /// <c>true</c> if the specified <see cref="System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+    /// </returns>
     public override bool Equals (object obj)
     {
-        //       
-        // See the full list of guidelines at
-        //   http://go.microsoft.com/fwlink/?LinkID=85237  
-        // and also the guidance for operator== at
-        //   http://go.microsoft.com/fwlink/?LinkId=85238
-        //
-
-        if (obj == null || GetType() != obj.GetType()) 
-        {
-            return false;
-        }
-        
         // TODO: write your implementation of Equals() here
-        throw new $Exception$();
         return base.Equals (obj);$end$ 
     }
     
-    // override object.GetHashCode
+    /// <summary>
+    /// Returns a hash code for this instance.
+    /// </summary>
+    /// <returns>
+    /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+    /// </returns>
     public override int GetHashCode()
     {
         // TODO: write your implementation of GetHashCode() here
-        throw new $Exception$();
         return base.GetHashCode();
     }]]>
 			</Code>

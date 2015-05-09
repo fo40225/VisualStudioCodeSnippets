@@ -19,17 +19,17 @@
 				</Literal>
 				<Literal Editable="false">
 					<ID>SystemCollectionsGenericIEnumeratorG</ID>
-					<Default>System.Collections.Generic.IEnumerator</Default>
-				</Literal>
-				<Literal Editable="false">
-					<ID>Exception</ID>
-					<Function>SimpleTypeName(global::System.NotImplementedException)</Function>
-				</Literal>
+                    <Function>SimpleTypeName(global::System.Collections.Generic.IEnumerator)</Function>
+				</Literal>				
 			</Declarations>
-			<Code Language="csharp"><![CDATA[public $SystemCollectionsGenericIEnumeratorG$<$type$> GetEnumerator()
+			<Code Language="csharp"><![CDATA[/// <summary>
+/// Returns an enumerator that iterates through the collection.
+/// </summary>
+/// <returns>An enumerator that iterates through the collection.</returns>
+public $SystemCollectionsGenericIEnumeratorG$<$type$> GetEnumerator()
 {
-    $end$throw new $Exception$();
-    yield return default($type$);
+    // TODO: write your implementation of GetEnumerator() here.
+    yield return default($type$);$end$
 }]]>
 			</Code>
 		</Snippet>

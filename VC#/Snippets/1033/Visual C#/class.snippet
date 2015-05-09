@@ -13,13 +13,26 @@
 		</Header>
 		<Snippet>
 			<Declarations>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Access modifier</ToolTip>
+                    <Default>public</Default>
+                </Literal>
 				<Literal>
 					<ID>name</ID>
 					<ToolTip>Class name</ToolTip>
 					<Default>MyClass</Default>
 				</Literal>
+                <Literal>
+                    <ID>summary</ID>
+                    <ToolTip>Summary</ToolTip>
+                    <Default>Summary</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[class $name$
+			<Code Language="csharp"><![CDATA[/// <summary>
+    /// $summary$
+    /// </summary>
+    $access$ class $name$
 	{
 		$selected$$end$
 	}]]>

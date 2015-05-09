@@ -13,6 +13,11 @@ Language Version: C# 3.0 or higher</Description>
 		</Header>
 		<Snippet>
 			<Declarations>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Access modifier</ToolTip>
+                    <Default>public</Default>
+                </Literal>
 				<Literal>
 					<ID>type</ID>
 					<ToolTip>Property type</ToolTip>
@@ -23,8 +28,21 @@ Language Version: C# 3.0 or higher</Description>
 					<ToolTip>Property name</ToolTip>
 					<Default>MyProperty</Default>
 				</Literal>
+                <Literal>
+                    <ID>summary</ID>
+                    <ToolTip>Summary</ToolTip>
+                    <Default>summary</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[public $type$ $property$ { get; set; }$end$]]>
+			<Code Language="csharp"><![CDATA[/// <summary>
+/// Gets or sets the $summary$.
+/// </summary>
+/// <value>The $summary$.</value>
+$access$ $type$ $property$ 
+{
+    get; 
+    set; 
+} $end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

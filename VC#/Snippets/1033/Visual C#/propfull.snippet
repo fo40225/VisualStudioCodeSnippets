@@ -12,6 +12,11 @@
 		</Header>
 		<Snippet>
 			<Declarations>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Access modifier</ToolTip>
+                    <Default>public</Default>
+                </Literal>
 				<Literal>
 					<ID>type</ID>
 					<ToolTip>Property type</ToolTip>
@@ -25,17 +30,41 @@
 				<Literal>
 					<ID>field</ID>
 					<ToolTip>The variable backing this property</ToolTip>
-					<Default>myVar</Default>
+					<Default>field</Default>
 				</Literal>
+                <Literal>
+                    <ID>fieldSummary</ID>
+                    <ToolTip>Backing field summary</ToolTip>
+                    <Default>summary</Default>
+                </Literal>
+                <Literal>
+                    <ID>summary</ID>
+                    <ToolTip>Summary</ToolTip>
+                    <Default>summary</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[private $type$ $field$;
+			<Code Language="csharp">
+                <![CDATA[/// <summary>
+/// The $fieldSummary$.
+/// </summary>
+private $type$ $field$;
 
-	public $type$ $property$
-	{
-		get { return $field$;}
-		set { $field$ = value;}
-	}
-	$end$]]>
+/// <summary>
+/// Gets or sets the $summary$.
+/// </summary>
+/// <value>The $summary$.</value>
+$access$ $type$ $property$
+{
+	get 
+    { 
+        return this.$field$;
+    }
+    
+	set 
+    { 
+        this.$field$ = value;
+    }
+}$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

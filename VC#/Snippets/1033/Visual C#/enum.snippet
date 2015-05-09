@@ -13,15 +13,28 @@
 		</Header>
 		<Snippet>
 			<Declarations>
+                <Literal>
+                    <ID>access</ID>
+                    <ToolTip>Access modifier</ToolTip>
+                    <Default>public</Default>
+                </Literal>
 				<Literal>
 					<ID>name</ID>
 					<ToolTip>Enum name</ToolTip>
 					<Default>MyEnum</Default>
 				</Literal>
+                <Literal>
+                    <ID>summary</ID>
+                    <ToolTip>Summary</ToolTip>
+                    <Default>Summary</Default>
+                </Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[enum $name$
+			<Code Language="csharp"><![CDATA[/// <summary>
+    /// $summary$
+    /// </summary>
+    $access$ enum $name$
 	{
-	        $selected$ $end$
+	    $selected$$end$
 	}]]>
 			</Code>
 		</Snippet>
