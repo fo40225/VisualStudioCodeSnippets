@@ -23,12 +23,10 @@
 					<ToolTip>Thread instance</ToolTip>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(
-				() => 
-				{
-					$selected$$end$
-				});
-
+			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(() => 
+			{
+				$selected$$end$
+			});
 			$thread$.Start();]]>
 			</Code>
 		</Snippet>

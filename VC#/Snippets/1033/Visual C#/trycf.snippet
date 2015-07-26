@@ -34,10 +34,6 @@
 }
 catch ($expression$ $ex$)
 {
-	if($SystemDiagnosticsDebugger$.IsAttached)
-	{
-		$SystemDiagnosticsDebugger$.Break();
-	}
 	$end$
 	throw;
 }

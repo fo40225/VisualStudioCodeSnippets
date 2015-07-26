@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>amethod</Title>
+			<Shortcut>amethod</Shortcut>
+			<Description>Code snippet for abstract method</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>access</ID>
+					<ToolTip>Access modifier</ToolTip>
+					<Default>public</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Method name</ToolTip>
+					<Default>MyMethod</Default>
+				</Literal>
+				<Literal>
+					<ID>return</ID>
+					<ToolTip>Return type</ToolTip>
+					<Default>void</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$access$ abstract $return$ $name$()
+{
+	$selected$$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

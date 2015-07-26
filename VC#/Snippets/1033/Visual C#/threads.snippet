@@ -33,12 +33,10 @@
 					<ToolTip>Thread state value</ToolTip>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(
-				($state$) => 
-				{
-					$selected$$end$
-				});
-
+			<Code Language="csharp"><![CDATA[$SystemThreadingThread$ $thread$ = new $SystemThreadingThread$(($state$) => 
+			{
+				$selected$$end$
+			});
 			$thread$.Start($value$);]]>
 			</Code>
 		</Snippet>

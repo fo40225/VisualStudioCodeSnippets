@@ -2,24 +2,23 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>fixed</Title>
-			<Shortcut>fixed</Shortcut>
-			<Description>Code snippet for fixed statement</Description>
+			<Title>pimethod</Title>
+			<Shortcut>pimethod</Shortcut>
+			<Description>Code snippet for partial method implement</Description>
 			<Author></Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
-				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>variable</ID>
-					<ToolTip>variable to pined</ToolTip>
-					<Default>variable</Default>
+					<ID>name</ID>
+					<ToolTip>Method name</ToolTip>
+					<Default>MyMethod</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[fixed ($variable$)
+			<Code Language="csharp"><![CDATA[partial void $name$()
 {
 	$selected$$end$
 }]]>
