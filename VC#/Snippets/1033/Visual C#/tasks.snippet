@@ -33,7 +33,7 @@
                     <ToolTip>Task state value</ToolTip>
                 </Literal>
             </Declarations>
-            <Code Language="csharp"><![CDATA[var $task$ = $SystemThreadingTasksTask$.Factory.StartNew(($state$) =>
+            <Code Language="csharp"><![CDATA[var $task$ = $SystemThreadingTasksTask$.Factory.StartNew($state$ =>
             {
                 $selected$$end$
             }, $value$);]]>

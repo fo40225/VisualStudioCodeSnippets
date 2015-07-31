@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>timer</Title>
+			<Shortcut>timer</Shortcut>
+			<Description>Code snippet for creating and starting a timer using a lambda expression.</Description>
+			<Author></Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemThreadingTimer</ID>
+					<Function>SimpleTypeName(global::System.Threading.Timer)</Function>
+				</Literal>
+				<Literal>
+					<ID>timer</ID>
+					<Default>timer</Default>
+					<ToolTip>Timer instance</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>dueTime</ID>
+					<Default>dueTime</Default>
+					<ToolTip>The delay before the invoking</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>period</ID>
+					<Default>period</Default>
+					<ToolTip>The time interval</ToolTip>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$SystemThreadingTimer$ $timer$ = new $SystemThreadingTimer$(t => 
+			{
+				$selected$$end$
+			});
+			$timer$.Change($dueTime$, $period$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
