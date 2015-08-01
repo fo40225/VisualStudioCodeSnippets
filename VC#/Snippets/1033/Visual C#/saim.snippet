@@ -2,10 +2,10 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>sim</Title>
-			<Shortcut>sim</Shortcut>
-			<Description>Code snippet for 'int Main' method</Description>
-			<Author>Microsoft Corporation</Author>
+			<Title>saim</Title>
+			<Shortcut>saim</Shortcut>
+			<Description>Code snippet for 'async int Main' method</Description>
+			<Author></Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
@@ -18,6 +18,16 @@
 /// <param name="args">An array of <see cref="T:System.String"/> containing command line parameters.</param>
 /// <returns>An <see cref="T:System.Int32"/> value indicating whether the program completed successfully.</returns>
 private static int Main(string[] args)
+{
+	return MainAsync(args).Result;
+}
+
+/// <summary>
+/// The async main method body.
+/// </summary>
+/// <param name="args">An array of <see cref="T:System.String"/> containing command line parameters.</param>
+/// <returns>A <see cref="T:System.Threading.Tasks.Task"/> contain an <see cref="T:System.Int32"/> value indicating whether the program completed successfully.</returns>
+private static async Task<int> MainAsync(string[] args)
 {
 	$end$
 	return 0;
