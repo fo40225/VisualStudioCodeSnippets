@@ -1,0 +1,29 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>forof</Title>
+    <Author></Author>
+    <Shortcut>forof</Shortcut>
+    <Description>Code snippet for a for...of loop</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier that represents the element in the collection</ToolTip>
+        <Default>item</Default>
+      </Literal>
+      <Literal>
+        <ID>collection</ID>
+        <ToolTip>Name of collection or array to iterate through</ToolTip>
+        <Default>collection</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[for (var $identifier$ of $collection$) {
+    $selected$$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

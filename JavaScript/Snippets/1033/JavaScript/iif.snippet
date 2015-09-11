@@ -1,0 +1,32 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>iif</Title>
+    <Author></Author>
+    <Shortcut>iif</Shortcut>
+    <Description>Code snippet for an inline if (bool ? a : b) statement</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to evaluate</ToolTip>
+        <Default>true</Default>
+      </Literal>
+      <Literal>
+        <ID>a</ID>
+        <ToolTip>True Value</ToolTip>
+        <Default>"true"</Default>
+      </Literal>
+      <Literal>
+        <ID>b</ID>
+        <ToolTip>False Value</ToolTip>
+        <Default>"false"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript"><![CDATA[$expression$ ? $a$ : $b$;]]></Code>
+  </Snippet>
+</CodeSnippet>
