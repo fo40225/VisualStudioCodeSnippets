@@ -37,12 +37,12 @@
 					<ToolTip>The time interval after callback done</ToolTip>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[$SystemThreadingTimer$ $timer$ = new $SystemThreadingTimer$(t => 
+			<Code Language="csharp"><![CDATA[$SystemThreadingTimer$ $timer$ = new $SystemThreadingTimer$(t =>
 			{
 				$selected$$end$
-				(($SystemThreadingTimer$)t).Change($period$, $SystemThreadingTimer$.Infinite);
+				(($SystemThreadingTimer$)t).Change($period$, $SystemThreadingTimeout$.Infinite);
 			});
-			$timer$.Change($dueTime$, $SystemThreadingTimer$.Infinite);]]>
+			$timer$.Change($dueTime$, $SystemThreadingTimeout$.Infinite);]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
