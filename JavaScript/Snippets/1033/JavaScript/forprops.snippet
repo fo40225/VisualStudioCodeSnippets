@@ -1,0 +1,30 @@
+﻿<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>forprops</Title>
+    <Author></Author>
+    <Shortcut>forprops</Shortcut>
+    <Description>Code Snippet for iterating through the properties of an object</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>property</ID>
+        <Default>property</Default>
+      </Literal>
+      <Object>
+        <ID>object</ID>
+        <Default>object</Default>
+      </Object>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[for (var $property$ in $object$) {
+    if (({}).hasOwnProperty.call($object$, $property$)) {
+        $selected$$end$
+    }
+};]]></Code>
+  </Snippet>
+</CodeSnippet>
